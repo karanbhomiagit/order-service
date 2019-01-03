@@ -8,7 +8,7 @@ RUN apk update -qq && apk add git
 COPY . ${SOURCES}
 RUN go get googlemaps.github.io/maps
 RUN go get gopkg.in/mgo.v2
-Run go get github.com/stretchr/testify
+RUN go get github.com/stretchr/testify
 RUN cd ${SOURCES} && CGO_ENABLED=0 go install
 
 ENV PORT 8080
